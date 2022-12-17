@@ -1,4 +1,4 @@
-const { prefix } = require(`../config.json`);
+const { prefix } = require(`../settings/config.json`);
 
 const helpMessage = `\`\`\`ini
 [${prefix}ping] - Replies with the latency of the bot

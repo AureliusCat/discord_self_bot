@@ -1,5 +1,5 @@
 const { Client, Collection } = require(`discord.js-selfbot-v13`);
-const { token, id, prefix } = require(`./config.json`);
+const { token, id, prefix } = require(`./settings/config.json`);
 const fs = require(`fs`);
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
