@@ -49,6 +49,6 @@ Note: You shouldn't have to edit any other file. However if you know what you're
   * More features comming soon.
   
 ## Contact information ##
-Please only contact me if you absolutely have to.
-Discord: Aurelius#7735.
-Email: johndrako@pm.me.
+  * Please only contact me if you absolutely have to.
+    * Discord: Aurelius#7735.
+    * Email: johndrako@pm.me.
