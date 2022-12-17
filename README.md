@@ -3,12 +3,12 @@
 PLEASE NOTE: THIS PROJECT IS VERY NEW AND I AM THE ONLY PERSON CURRENTLY WORKING ON IT. IT IS LIKELY TO BE ROUGH, BUGGY, AND HARD TO USE.
 
 ### Required software to run the bot ###
-- - - -
+- - - - -
   * [node.js](https://nodejs.org/en/download/). Needed to run the bot.
   * [Git](https://git-scm.com/downloads). Needed to download the bot's files.
 
 ### Downloading the bot ###
-- - - -
+- - - 
   * On your computer, open the location where you want to download the bot.
   * Run `git clone https://github.com/AureliusCat/discord_self_bot.git'.
   * Open a shell in the directory that was downloaded and run `npm i discord.js-selfbot-v13@latest`.
@@ -53,3 +53,9 @@ Note: You shouldn't have to edit any other file. However if you know what you're
   * Flip a coin.
   * Get the latency of the bot.
   * Kill the bot.
+  
+## Contanct information ##
+----
+Please only contanct me if you absolutely have to.
+Discord: Aurelius#7735
+Email: johndrako@pm.me
