@@ -16,7 +16,6 @@
   "author": "aurelius",
   "license": "ISC",
   "dependencies": {
-    "discord.js-selfbot-v13": "^2.9.13",
-    "nodemon": "^2.0.20"
+    "discord.js-selfbot-v13": "^2.9.13"
   }
 }
