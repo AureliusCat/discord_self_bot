@@ -1,9 +1,11 @@
 # discord_self_bot
 
+PLEASE NOTE: THIS PROJECT IS VERY NEW AND I AM THE ONLY PERSON CURRENTLY WORKING ON IT. IT IS LIKELY TO BE ROUGH, BUGGY, AND HARD TO USE.
+
 ### Required software to run the bot ###
 - - - -
-  * [node.js](https://nodejs.org/en/download/).
-  * [Git](https://git-scm.com/downloads).
+  * [node.js](https://nodejs.org/en/download/). Needed to run the bot.
+  * [Git](https://git-scm.com/downloads). Needed to download the bot's files.
 
 ### Downloading the bot ###
 - - - -
@@ -39,3 +41,15 @@ Note: You shouldn't have to edit any other file. However if you know what you're
 - - - -
   * Open a shell in the bot folder.
   * Run `node .` or `node index.js`.
+
+### Features ###
+- - - -
+  * Get a help message with the command `<your_prefix>help`.
+  * Spam channels of servers.
+  * Spam the DMs of members of a server.
+  * Ghost ping a member of a server in every channel.
+  * Get information about a server.
+  * Get information about a member of a server.
+  * Flip a coin.
+  * Get the latency of the bot.
+  * Kill the bot.
