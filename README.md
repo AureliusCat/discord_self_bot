@@ -43,7 +43,6 @@ Note: You shouldn't have to edit any other file. However if you know what you're
   * Run `node .` or `node index.js`.
 
 ### Features ###
-- - - -
   * Get a help message with the command `<your_prefix>help`.
   * Spam channels of servers.
   * Spam the DMs of members of a server.
@@ -55,7 +54,6 @@ Note: You shouldn't have to edit any other file. However if you know what you're
   * Kill the bot.
   
 ## Contanct information ##
-----
 Please only contanct me if you absolutely have to.
-Discord: Aurelius#7735
-Email: johndrako@pm.me
+Discord: Aurelius#7735.
+Email: johndrako@pm.me.
