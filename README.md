@@ -39,7 +39,6 @@ Note: You shouldn't have to edit any other file. However if you know what you're
 ## Features ##
   * Get a help message with the command `<your_prefix>help`.
   * Spam channels of servers.
-  * Spam the DMs of members of a server.
   * Ghost ping a member of a server in every channel.
   * Get information about a server.
   * Get information about a member of a server.
