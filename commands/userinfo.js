@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'userinfo',
+	name: 'uinfo',
 	description: 'Replies with information about a user',
 	async execute(message, args, client) {
 
@@ -7,13 +7,21 @@ module.exports = {
 
         const info = `\`\`\`ini
 [Username] - ${a.tag}
+
 [ID] - ${a.id}
+
 [Time Created] - ${a.createdAt}
+
 [Connected Accounts] - ${a.connectedAccounts.map(account => account.type)}
+
 [Biography] - ${a.bio}
+
 [Nitro Type] - ${a.nitroType}
+
 [NSFW Allowed?] - ${a.nsfwAllowed}
+
 [Bot?] - ${a.bot}
+
 [System Account?] - ${a.system}
 \`\`\``;
 

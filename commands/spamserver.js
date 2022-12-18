@@ -1,7 +1,7 @@
 var interval;
 
 module.exports = {
-	name: 'spamserver',
+	name: 'sserv',
 	description: 'Repeatedly sends the given message in all channels of the guild that the message was sent',
 	execute(message, args, client) {
 
