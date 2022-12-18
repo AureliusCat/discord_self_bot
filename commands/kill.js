@@ -1,8 +1,9 @@
 module.exports = {
 	name: 'kill',
+	aliases: ['stop', 'end'],
+	usage: null,
 	description: 'Kills the node process',
-	execute(message) {
-        message.reply(`Clean exit`);
+	execute() {
 		process.exit();
 	},
 };

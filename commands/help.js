@@ -1,21 +1,39 @@
 const { prefix } = require(`../settings/config.json`);
 
-const helpM = `\`\`\`ini
-[${prefix}ping] - Replies with the latency of the bot
-[${prefix}kill] - Kills the bot process
-[${prefix}uinfo] - Replies with information about you
-[${prefix}sinfo] - Replies with information about the guild
-[${prefix}help] - Replies with this message
-[${prefix}ghost <mention>] - Ghost pings the mentioned user
-[${prefix}flip] - Flips a coin, heads or tails
-[${prefix}sserv start <message>] - Spams all channels of the guild with the given message
-[${prefix}sserv stop] - Stops the spam
-\`\`\``;
-
 module.exports = {
 	name: 'help',
+	aliases: ['commands'],
+	usage: '<command name>',
 	description: 'Replies with the help message',
-	execute(message) {
-		message.reply(helpM);
+	execute(message, args) {
+
+		const data = [];
+		const { commands } = message.client;
+
+		if (!args.length) {
+			data.push('List of commands:');
+			data.push(commands.map(command => command.name).join(', '));
+			data.push(`\nYou can send \`${prefix}help <command name>\` to get info on a specific command.`);
+		
+			return message.reply(data.join(` `), { split: true })
+		} 
+
+		else {
+		
+			const name = args[0].toLowerCase();
+			const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
+
+			if (!command) {
+				return message.reply('that\'s not a valid command!');
+			}
+
+			data.push(`**Name:** ${command.name}`);
+
+			if (command.aliases) data.push(`**Aliases:** ${command.aliases.join(', ')}`);
+			if (command.description) data.push(`**Description:** ${command.description}`);
+			if (command.usage) data.push(`**Usage:** ${prefix}${command.name} ${command.usage}`);
+
+			message.reply(data.join(`\n`), { split: true });
+		}
 	},
 };

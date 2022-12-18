@@ -22,14 +22,16 @@ client.on(`ready`, async () => {
 
 client.on(`messageCreate`, message => {
 
-	const args = message.content.slice(prefix.length).trim().split(/ +/);
-	const command = args.shift().toLowerCase();
+	if (message.author.id !== id) return;
 
-	
-	if (message.author.id !== id || !client.commands.has(command) || !message.content.startsWith(prefix)) return; // only owner can use bot
+	const args = message.content.slice(prefix.length).trim().split(/ +/);
+	const commandName = args.shift().toLowerCase();
+	const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+	if (!command) return; // only owner can use bot
 	
 	try {
-		client.commands.get(command).execute(message, args, client);
+		command.execute(message, args, client);
 	} catch (error) {
 		console.error(error);
 		message.reply('There was an error trying to execute that command');

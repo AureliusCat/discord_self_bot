@@ -1,7 +1,9 @@
 module.exports = {
 	name: 'uinfo',
+	aliases: ['ui', 'userinfo', 'mi', 'minfo', 'myinfo'],
+	usage: null,
 	description: 'Replies with information about a user',
-	async execute(message, args, client) {
+	execute(message) {
 
 		const a = message.author;
 

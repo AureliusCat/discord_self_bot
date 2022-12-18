@@ -1,5 +1,7 @@
 module.exports = {
 	name: 'ghost',
+	aliases: ['gp', 'ghostping'],
+	usage: '<message>',
 	description: 'Pings the mentioned user in every channel that the command was sent in, and instantly deletes the pings',
 	execute(message, args, client) {
 

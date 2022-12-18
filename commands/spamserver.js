@@ -2,6 +2,8 @@ var interval;
 
 module.exports = {
 	name: 'sserv',
+    aliases: ['ss', 'spamserv', 'spamserver', 'sg', 'spamguild'],
+    usage: '<message>',
 	description: 'Repeatedly sends the given message in all channels of the guild that the message was sent',
 	execute(message, args, client) {
 

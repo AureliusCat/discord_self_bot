@@ -1,5 +1,7 @@
 module.exports = {
 	name: 'sinfo',
+	aliases: ['si', 'servinfo', 'serverinfo', 'gi', 'ginfo', 'guildinfo'],
+	usage: null,
 	description: 'Replies with information about the server',
 	execute(message) {
 
