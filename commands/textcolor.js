@@ -10,10 +10,6 @@ module.exports = {
         var end = ``;
         var text = ``;
 
-        for (let i = 1; i < args.length; i++) {
-            text += args[i] + ` `;
-        }
-
         switch(args[0]) {
             case(`red`) :
                 lang = `diff`;
@@ -43,8 +39,9 @@ module.exports = {
                 break;
         }
 
-        const msg = `\`\`\`${lang}\n${start + text + end}\n\`\`\``;
+        args.shift()
+        text = args.join(' ');
 
-        message.reply(msg);
+        message.reply(`\`\`\`${lang}\n${start + text + end}\n\`\`\``);
 	},
 };

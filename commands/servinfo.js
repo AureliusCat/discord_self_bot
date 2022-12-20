@@ -5,32 +5,22 @@ module.exports = {
 	description: 'Replies with information about the server',
 	execute(message) {
 
-                const info = `\`\`\`ini
-[Name] - ${message.guild.name}
+		const g = message.guild;
+		const data = [];
 
-[ID] - ${message.guild.id}
+		data.push(`**Name:** ${g.name}`);
+		data.push(`**ID:** ${g.id}`);
+		data.push(`**Owner ID:** ${g.ownerId}`);
+		data.push(`**Member Count:** ${g.memberCount}`);
+		data.push(`**Preferred Locale:** ${g.preferredLocale}`);
+		data.push(`**Premium Tier:** ${g.premiumTier}`);
+		data.push(`**Premium Subscription Count:** ${g.premiumSubscriptionCount}`);
+		data.push(`**MFA Level:** ${g.mfaLevel}`);
+		data.push(`**Verification Level:** ${g.verificationLevel}`);
+		data.push(`**NSFW Level:** ${g.nsfwLevel}`);
+		data.push(`**Explicit Content Filter:** ${g.explicitContentFilter}`);
+		data.push(`**Roles:** \`${g.roles.cache.map(role => role.name).join(', ')}\``);
 
-[Owner ID] - ${message.guild.ownerId}
-
-[Member Count] - ${message.guild.memberCount}
-
-[Preferred Locale] - ${message.guild.preferredLocale}
-
-[Premium Tier] - ${message.guild.premiumTier}
-
-[Premium Subscription Count] - ${message.guild.premiumSubscriptionCount}
-
-[MFA Level] - ${message.guild.mfaLevel}
-
-[Verification Level] - ${message.guild.verificationLevel}
-
-[NSFW Level] - ${message.guild.nsfwLevel}
-
-[Explicit Content Filter] - ${message.guild.explicitContentFilter}
-
-[Roles] - ${message.guild.roles.cache.map(role => ` ${role.name}`)}
-\`\`\``;
-
-                message.reply(info);
+                message.reply(data.join('\n'));
 	},
 };

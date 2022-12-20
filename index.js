@@ -22,13 +22,13 @@ client.on(`ready`, async () => {
 
 client.on(`messageCreate`, message => {
 
-	if (message.author.id !== id) return;
+	if (message.author.id !== id || !message.content.startsWith(prefix)) return;
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
 	const commandName = args.shift().toLowerCase();
 	const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
-	if (!command) return; // only owner can use bot
+	if (!command) return;
 	
 	try {
 		command.execute(message, args, client);

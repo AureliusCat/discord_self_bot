@@ -6,27 +6,18 @@ module.exports = {
 	execute(message) {
 
 		const a = message.author;
+		const data = [];
 
-        const info = `\`\`\`ini
-[Username] - ${a.tag}
+		data.push(`**Username:** ${a.tag}`);
+		data.push(`**ID:** ${a.id}`);
+		data.push(`**Time Created:** ${a.createdAt}`);
+		data.push(`**Connected Accounts:** ${a.connectedAccounts.map(account => account.type).join(', ')}`);
+		data.push(`**Bio:** ${a.bio}`);
+		data.push(`**Nitro Type:** ${a.nitroType}`);
+		data.push(`**NSFW Allowed?:** ${a.nsfwAllowed}`);
+		data.push(`**Bot?:** ${a.bot}`);
+		data.push(`**System Account?:** ${a.system}`);
 
-[ID] - ${a.id}
-
-[Time Created] - ${a.createdAt}
-
-[Connected Accounts] - ${a.connectedAccounts.map(account => account.type)}
-
-[Biography] - ${a.bio}
-
-[Nitro Type] - ${a.nitroType}
-
-[NSFW Allowed?] - ${a.nsfwAllowed}
-
-[Bot?] - ${a.bot}
-
-[System Account?] - ${a.system}
-\`\`\``;
-
-		message.reply(info);
+		message.reply(data.join('\n'));
 	},
 };
